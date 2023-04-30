@@ -14,7 +14,7 @@ from .sql_helper.globals import addgvar, delgvar, gvarstatus
 
 __version__ = "3.2.0"
 __license__ = "GNU Affero General Public License v3.0"
-__author__ = "سورس تيبثون <https://github.com/Tepthonee/thetepthon>"
+__author__ = "سورس تيبثون <https://github.com/Tepthonee/PPF22>"
 __copyright__ = f" حقوق سورس تيبثون (C) 2020 - 2022  {__author__}"
 
 tepthon.version = __version__
@@ -28,7 +28,7 @@ jmthonversion = "7.2.0"
 
 
 def close_connection(*_):
-    print("تم اغلاق الاتصال بالسورس")
+    print("تم إغلاق الاتصال بالسورس")
     runasync(tepthon.disconnect())
     sys.exit(143)
 
