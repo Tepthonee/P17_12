@@ -33,4 +33,4 @@ jobs:
           repository: .
           commit_user_name: Tepthonee
           commit_user_email: Tepthonee@users.noreply.github.com
-          commit_author: jmthonr <Tepthonee@users.noreply.github.com>
+          commit_author: Tepthonr <Tepthonee@users.noreply.github.com>
