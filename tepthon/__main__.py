@@ -25,7 +25,7 @@ cmdhr = Config.COMMAND_HAND_LER
 
 try:
     LOGS.info("يتم بدء البوت المساعد")
-    jmbot.loop.run_until_complete(setup_bot())
+    tepthon.loop.run_until_complete(setup_bot())
     LOGS.info("اكتملت عمليه البوت المساعد")
 except Exception as e:
     LOGS.error(f"{e}")
