@@ -17,8 +17,8 @@ __license__ = "GNU Affero General Public License v3.0"
 __author__ = "سورس تيبثون <https://github.com/Tepthonee/P17_12>"
 __copyright__ = f" حقوق سورس تيبثون (C) 2020 - 2022  {__author__}"
 
-tepthon.version = __version__
-tepthon.tgbot.version = __version__
+sbb_b.version = __version__
+sbb_b.tgbot.version = __version__
 LOGS = logging.getLogger("سورس تيبثون")
 bot = sbb_b
 tbot = tgbot
