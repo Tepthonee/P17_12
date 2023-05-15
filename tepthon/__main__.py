@@ -7,7 +7,7 @@ from razan.strings import blacklisted_users
 
 from .Config import Config
 from .core.logger import logging
-from .core.session import tepthon
+from .core.session import sbb_b
 from .sql_helper.globals import gvarstatus
 from .utils import (
     add_bot_to_logger_group,
@@ -25,7 +25,7 @@ cmdhr = Config.COMMAND_HAND_LER
 
 try:
     LOGS.info("يتم بدء البوت المساعد")
-    tepthon.loop.run_until_complete(setup_bot())
+    sbb_b.loop.run_until_complete(setup_bot())
     LOGS.info("اكتملت عمليه البوت المساعد")
 except Exception as e:
     LOGS.error(f"{e}")
@@ -33,7 +33,7 @@ except Exception as e:
 
 try:
     LOGS.info("يتم تفعيل وضع حمايه الحساب من الاختراق")
-    tepthon.loop.create_task(saves())
+    sbb_b.loop.create_task(saves())
     LOGS.info("تم تفعيل وضع حمايه الحساب من الاختراق")
 except Exception as bb:
     LOGS.error(f"- {bb}")
@@ -42,7 +42,7 @@ except Exception as bb:
 
 try:
     LOGS.info("يتم تفعيل وضع الانلاين")
-    tepthon.loop.run_until_complete(mybot())
+    sbb_b.loop.run_until_complete(mybot())
     LOGS.info("تم تفعيل وضع الانلاين بنجاح ✓")
 except Exception as meo:
     LOGS.error(f"- {meo}")
@@ -50,7 +50,7 @@ except Exception as meo:
 
 
 async def startup_process():
-    if tepthon.uid in blacklisted_users:
+    if sbb_b.uid in blacklisted_users:
         LOGS.info("انت لا يمكنك تنصيب سورس تيبثون عزيزي دي")
         return
     if not gvarstatus("TNSEEB"):
@@ -80,10 +80,10 @@ async def startup_process():
         LOGS.info("انت لا يمكنك تنصيب سورس تيبثون عزيزي دي")
 
 
-tepthon.loop.run_until_complete(startup_process())
+sbb_b.loop.run_until_complete(startup_process())
 
 if len(sys.argv) in {1, 3, 4}:
     with contextlib.suppress(ConnectionError):
-        tepthon.run_until_disconnected()
+        sbb_b.run_until_disconnected()
 else:
-    tepthon.disconnect()
+    sbb_b.disconnect()
