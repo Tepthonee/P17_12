@@ -6,7 +6,7 @@ import heroku3
 
 from .Config import Config
 from .core.logger import logging
-from .core.session import tepthon, tgbot
+from .core.session import sbb_b, tgbot
 from .helpers.functions.converter import Convert
 from .helpers.functions.musictool import *
 from .helpers.utils.utils import runasync
@@ -20,7 +20,7 @@ __copyright__ = f" حقوق سورس تيبثون (C) 2020 - 2022  {__author__}"
 tepthon.version = __version__
 tepthon.tgbot.version = __version__
 LOGS = logging.getLogger("سورس تيبثون")
-bot = tepthon
+bot = sbb_b
 tbot = tgbot
 
 StartTime = time.time()
@@ -29,7 +29,7 @@ jmthonversion = "2.1.2"
 
 def close_connection(*_):
     print("تم اغلاق الاتصال بالسورس")
-    runasync(jmbot.disconnect())
+    runasync(sbb_b.disconnect())
     sys.exit(143)
 
 
